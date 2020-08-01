@@ -256,9 +256,11 @@ function get20s(arr){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+function removeArtist(arr, remove) {
+  let removeFromArray = arr[remove]
+  arr.splice(removeFromArray, 1)
+  console.log(arr.length)
+}
   
  
 
@@ -275,11 +277,20 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(arr,id,name,years,genre,nationality,bio){
+  arr.push({
+    'id': id,
+    "name": name,
+    "years": years,
+    "genre": genre,
+    "nationality": nationality,
+    "bio": bio
+     })
+}
 
-    /* Code here */
+addArtist(artists, 20, "Nathaniel Patterson", "1991 - Present", "Web Design", "American", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries")
 
-  }
+console.log(artists)
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -289,11 +300,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(arr){
+  let arrToReturn = []
+  for (i in arr) {
+    if (arr[i].paintings > 100) {
+      //console.log(arr[i].paintings)
+      arrToReturn.push(arr[i].name)
+    }
+  }
+  return arrToReturn
 }
+
+console.log(lotsOfArt(artists))
 
 
 
