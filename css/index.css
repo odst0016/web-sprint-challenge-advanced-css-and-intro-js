@@ -79,7 +79,6 @@ nav a{
 }
 nav span{
     border-left:3px solid #626262;
-
 }
 /*Title Section Styles*/
 .title-container{
@@ -133,4 +132,91 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+@media screen and (max-width: 830px){
+    a {	
+        text-decoration: none;	
+        color: grey;
+        font-size:2rem;	
+        margin: 1rem;
+        
+    }
+    nav span{
+        border-left:3px solid #626262;
+        margin: 1rem 0;
+    }
+    .title-container div{
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    nav{
+        width:50%;
+        display:flex;
+        justify-content:space-around;
+        margin-top:5%;
+    }
+    a {	
+        text-decoration: none;	
+        color: grey;
+        font-size:2rem;	
+        
+    }	
+    a:hover {	
+        font-weight: bold;	
+    }	
+    nav span{
+        border-left:3px solid #626262;
+        margin: 1rem 0;
+    }
+    .title-container div {	
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg');		
+        background-position: center;
+        background-size: center;	
+        color: white;	
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:60vh;
+        margin:5% 0;
+        border-radius: 0px;
+        height: 50vh;
+    }
+    #hr1 {
+        width: 100%;
+        border-top: .12rem solid grey;
+        /* margin: .1% auto 2rem auto; */
+    }
+    .artists-container{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        margin-bottom: 15rem;
+    }
+    .artist{
+        width:100%;
+        
+    }
+    .artist img{
+        width:50%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .bio {
+        margin: 0 auto;
+        width: 65%;
+        font-size: 1rem;
+        text-align: center;  
+    }
+    
 }
